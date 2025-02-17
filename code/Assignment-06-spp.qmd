@@ -51,6 +51,7 @@ Write here what are the objectives of the study you are designing. Remember that
 Background: Iron can significantly increase the rate of photosyntheis in any crop. Photosyntheis process requires significant amount of water. Therefore, a successful tomato production requires an optimum rate of iron and irrigation. 
 
 Hypothesis: Increase in the rate of iron and irrigation will increase the growth of tomato production.
+
 Objective: To evaluate the effect of increasing rate of iron and irrigation in tomato production.
 
 
@@ -121,7 +122,9 @@ spp_rcbd_rand %>%
   filter(block == 1)
 ```
 
-## Plot layout  
+## Plot layout 
+In this chunk, I am defining the rows and columns for the plot layout. Also, I will create another column to "lab" by joining the trtname and the splot.
+
 ```{r spp_rcbd_layout}
 spp_rcbd_layout <- spp_rcbd_rand %>%
   # Defining number of rows and columns in the field for plotting purposes
@@ -136,7 +139,7 @@ spp_rcbd_layout <- spp_rcbd_rand %>%
 
 spp_rcbd_layout
 ```
-Now, let's plot it.
+Now, After defing row and column for the plot layout, it is time to plot it by using ggplot.
 ```{r spp rcbd map}
 ggplot(data = spp_rcbd_layout, aes(x = row, 
                                    y = -col)) + 
@@ -168,6 +171,7 @@ ggplot(data = spp_rcbd_layout, aes(x = row,
 
 
 # Exporting to file  
+Here, I am exporting a table and image of the plot layout in my computer.
 
 ```{r}
 spp_rcbd_rand %>%
