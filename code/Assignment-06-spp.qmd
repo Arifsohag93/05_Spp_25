@@ -158,9 +158,9 @@ ggplot(data = spp_rcbd_layout, aes(x = row,
   
   
 
-    scale_fill_manual(values = c("#e5f0db",
-                               "#b1d095",
-                               "#5e813f")) +
+    scale_fill_manual(values = c("#d9b382",
+                             "#8c6d31",
+                             "#ffeda0")) +
 
   geom_text(aes(label = splot), fontface = "bold", vjust = -.8) +
   geom_text(aes(label = trtname), vjust = 1) +
